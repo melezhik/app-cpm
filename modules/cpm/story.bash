@@ -16,6 +16,7 @@ if test -z $install_base; then
     cpm install $flags -g $package || exit 1
 else
     echo install $package into $install_base ...
+    mkdir -p $install_base || exit 1
     cpm install $flags -L $install_base  $package || exit 1
 fi
 

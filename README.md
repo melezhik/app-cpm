@@ -4,13 +4,11 @@ Install CPAN modules using App::cpm - a fast CPAN module installer.
 
 # Prerequisites
 
-cpanm client
-
+App::cpm client (cpm)
 
 # INSTALL
 
     $ sparrow plg install app-cpm
-
 
 # USAGE
 
@@ -33,29 +31,35 @@ cpanm client
 
 ## list
 
-Should be space separated list of packages to install. For example:
+Should be space separated list of packages to install. 
+
+For example:
 
     list CGI DBI Moose
 
+## workers
+
+Number of cpm workers, see App::cpm docs.
+
 ## install-base
 
-Specify the install base to install modules. See also `-l` parameter for cpanm client.
-
-## user
-
-Specify a user which runs installer process. Normally you would need it when install modules
-into someone's home directory.
+Sets install base, see also -L parameter for cpm client.
 
 ## http_proxy
 
-Specify http proxy server to use when installing cpan packages
+Specify http proxy server to use when installing cpan packages.
 
 ## https_proxy
 
-Specify https proxy server to use when installing cpan packages
+Specify https proxy server to use when installing cpan packages.
+
+# See also
+
+[App::cpm](https://metacpan.org/pod/App::cpm)
 
 # AUTHOR
 
 [Alexey Melezhik](mailto:melezhik@gmail.com)
+
 
 

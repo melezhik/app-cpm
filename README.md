@@ -23,7 +23,8 @@ App::cpm client (cpm)
       plugin => 'app-cpm',
       parameters => %( 
         list => 'CGI DBI Moose',
-        install-base => '/var/app/'
+        install-base => '/var/app/',
+        verbose => 1
       )
     );
     
@@ -40,6 +41,10 @@ For example:
 ## workers
 
 Number of cpm workers, see App::cpm docs.
+
+## verbose
+
+Sets verbose mode on. See --verbose paraneter for cpm client.
 
 ## install-base
 

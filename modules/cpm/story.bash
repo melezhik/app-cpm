@@ -28,7 +28,7 @@ if test -z $install_base; then
     else
       echo local install $package for user $user ...
       su --shell `which bash` --login -c "$set_https_proxy $set_http_proxy \
-      cpm install $flags $package" || exit 1
+      cpm install $flags $package" $user || exit 1
     fi
 # install base is set
 else
@@ -39,7 +39,7 @@ else
     else
       echo install $package into $install_base for user $user ...
       su --shell `which bash` --login -c "$set_https_proxy $set_http_proxy \
-      mkdir -p $install_base && cpm install -L $install_base  $package" || exit 1
+      mkdir -p $install_base && cpm install $flags -L $install_base  $package" $user || exit 1
     fi
 fi
 
